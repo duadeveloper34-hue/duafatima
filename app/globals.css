@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   Design tokens
+   Indigo + Violet identity. Light theme is a warm-neutral paper,
+   never plain white. Dark theme is a near-black with an indigo
+   cast, never flat black.
+   --------------------------------------------------------------- */
+
+@theme {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-indigo-500: #4f46e5;
+  --color-indigo-400: #6f68ea;
+  --color-violet-500: #7c3aed;
+  --color-violet-400: #9a6bf2;
+}
+
+:root {
+  color-scheme: light;
+
+  --bg: #faf8fc;
+  --bg-soft: #f1ecf9;
+  --surface: #ffffff;
+  --border: #e2dcef;
+  --text: #1c1730;
+  --text-muted: #635c78;
+  --accent: #4f46e5;
+  --accent-2: #7c3aed;
+  --accent-contrast: #ffffff;
+  --ring: rgba(79, 70, 229, 0.35);
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #0e0b16;
+  --bg-soft: #17131f;
+  --surface: #1a1626;
+  --border: #2b2438;
+  --text: #f2eff8;
+  --text-muted: #a79fbb;
+  --accent: #8b85f5;
+  --accent-2: #b48af7;
+  --accent-contrast: #0e0b16;
+  --ring: rgba(139, 133, 245, 0.35);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Editorial rule used as a section divider instead of card shadows */
+.rule {
+  height: 1px;
+  background: var(--border);
+}
+
+.text-gradient {
+  background-image: linear-gradient(100deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
