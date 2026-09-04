@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
-import profilePhoto from "@/public/images/dua-fatima.png";
+import profilePhoto from "@/public/images/dua-fatima.jpg";
 
 export default function Hero() {
   return (
