@@ -49,13 +49,13 @@ export default function MobileMenu() {
               ×
             </button>
           </div>
-          <nav className="flex flex-col gap-1 px-6 pt-8">
+          <nav className="flex flex-col gap-0 px-6 pt-5 text-[var(--text)]">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-[var(--border)] py-4 font-[family-name:var(--font-display)] text-3xl"
+                className="border-b border-[var(--border)] py-2 font-[family-name:var(--font-display)] text-3xl bg-[var(--bg)] text-[var(--text)] transition-colors duration-200 hover:text-[var(--accent)]"
               >
                 {link.label}
               </Link>
