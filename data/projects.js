@@ -1,17 +1,17 @@
 // Edit this file to add, remove, or update projects.
-// Fields left as "#" or marked EDIT ME are placeholders — replace them
-// with your real links when they're ready. Never invent URLs here.
+// Fields left as "#" are placeholders — replace them with your real
+// links and screenshots when they're ready. Never invent URLs here.
 
 export const projects = [
   {
-    id: "ai-content-hub",
-    title: "AI Content Hub",
+    id: "smilecare-dental-clinic",
+    title: "SmileCare Dental Clinic",
     description:
-      "A content-creation dashboard that helps users generate captions, blog ideas, and social posts. Built and deployed as a real, working product.",
+      "SmileCare Dental Clinic is a fully responsive website built for a modern multispecialty dental practice. The project aims to digitalize the patient onboarding experience by offering seamless online scheduling, clear service breakdowns, and educational oral health resources.",
     tags: ["React.js", "JavaScript", "API Integration", "Responsive UI"],
-    image: "/images/projects/ai-content-hub.png",
-    liveUrl: "https://aicontenthub-rho.vercel.app/",
-    githubUrl: "#", // EDIT ME — add the repo link if it's public
+    image: "/images/projects/screenshot.png",
+    liveUrl: "https://smile-care-dental-clinic-eight.vercel.app/",
+    githubUrl: "https://github.com/murtaza700/SmileCare-Dental-Clinic",
     featured: true,
   },
   {
@@ -70,3 +70,9 @@ export const projects = [
     featured: false,
   },
 ];
+
+// Guard the dataset against accidental mutation by consumers.
+Object.freeze(projects);
+projects.forEach(Object.freeze);
+
+export default projects;
